@@ -1,0 +1,50 @@
+#cont{
+    margin-top: 25px;
+    text-align: center;
+    padding-top: 4%;
+    width: 30%;
+    padding-bottom: 4%;
+     margin-left: 30%;
+      margin-right: 05%;
+      background-color: rgb(205, 229, 243);
+      color: black;
+      border-style:groove;
+      float: right;
+      
+}
+.whyInsu{
+   background-color: rgb(205, 229, 243);
+   width: 60%;
+   height: 450px;
+    text-align: center; 
+   border-style:groove;
+   text-align:right ;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif 
+} 
+.text{
+    text-decoration-color: white;
+    width:70%;
+    text-align: justify;
+    text-align: right; 
+    
+    
+}
+.image{
+   align-items: center;
+   height: auto;
+   max-width: 150%;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+.input{
+    
+    padding: 2% 2%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.input:hover{
+  background-color:aqua;
+}

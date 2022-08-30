@@ -1,0 +1,25 @@
+.cont{
+  margin-top: 10px;
+text-align: center;
+margin-left: 25%;
+padding-top: 2%;
+width: 50%;
+padding-bottom: 2%;
+  margin-right: 05%;
+  background-color: rgb(223, 250, 248);  
+  
+  
+}
+.cont1{
+  margin-left: 33%;
+}
+.input{
+  height: 1%;
+width: 40%;
+  padding: 2% 2%;
+}
+
+.error{
+  size: 2%;
+  color:rgb(240, 78, 78);
+}

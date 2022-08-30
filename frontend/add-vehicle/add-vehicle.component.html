@@ -1,0 +1,70 @@
+<div class="cont">
+    <form #vehicleForm="ngForm" (ngSubmit)="addVehicle(vehicleForm)" class="cont1">
+        <table  class="input">
+             
+            <div class="form-group">
+                    <tr>
+                    <td>Vehicle Model</td> </tr>
+                    <input required #vmodel="ngModel" pattern="[a-zA-Z]*" minlength="3" type="text" name="vmodel" class="form-control" ngModel>
+                    <span *ngIf="vmodel.invalid && vmodel.touched" class="error">Vehicle Model required</span>
+             </div>
+                <div class="form-group">
+                 <tr><td>Vehicle Type</td></tr>
+                            <select required #type="ngModel"  name="type" class="form-control" ngModel>
+                            <option value="4 wheeler">4 wheeler</option>
+                            <option value="2 wheeler">2 wheeler</option>
+                             </select> 
+                             <span *ngIf="type.invalid && type.touched" class="error">Select Vehicle Type</span>
+    
+                 </div>
+            
+            
+            <div class="form-group">
+                <tr>
+                <td>Manufacturer By</td> </tr>
+                <input required #manufac="ngModel" type="text" name="manufac" class="form-control" ngModel>
+                <span *ngIf="manufac.invalid && manufac.touched" class="error">Enter Manufacturer Company</span>
+             </div>
+             
+            <div class="form-group">
+                <tr>
+                <td>PurchaseDate</td></tr><input required #purchasedate="ngModel" type="date" name="purchasedate" class="form-control" ngModel>
+                <span *ngIf="purchasedate.invalid && purchasedate.touched" class="error">Enter Purchase Date</span>
+            </div>
+            
+                <div class="form-group">
+                <tr>
+                <td>Registration Number</td></tr><input required #registrationnum="ngModel" type="text" name="registrationnum" class="form-control" ngModel>
+                <span *ngIf="registrationnum.invalid && registrationnum.touched" class="error">Registration Number required</span>
+                 </div>
+            <div class="form-group">
+                <tr>
+                <td>Engine Number</td></tr><input required #enginenum="ngModel" type="text" name="enginenum" class="form-control" ngModel>
+                <span *ngIf="enginenum.invalid && enginenum.touched" class="error">Engine Number required</span>   
+             </div>
+            
+            <div class="form-group">
+                <tr><td>Chassis Number</td></tr>
+                <input required #chassisnum="ngModel" type="text" name="chassisnum" class="form-control" ngModel>
+                <span *ngIf="chassisnum.invalid && chassisnum.touched" class="error">Chassis Number required</span>
+            </div>
+           
+            <div class="form-group">
+            <tr>
+            <td>Driving Licence</td></tr>
+            <input required #drivinglicensenum="ngModel" type="text" name="drivinglicensenum" class="form-control" ngModel>
+            <span *ngIf="drivinglicensenum.invalid && drivinglicensenum.touched" class="error">driving licensense required</span>
+            </div>
+            <br>
+           
+            <div class="form-group">
+            <tr>
+                <td><input type="reset" value="RESET" class="btn btn-primary"></td>
+                <!-- <td> <input [disabled]="vehicleForm.invalid" type="submit" value="SAVE" class="btn btn-success"> </td> -->
+                <td><button [disabled]="vehicleForm.invalid" type="submit" value="SAVE" class="btn btn-success">Submit</button></td>
+            </tr>
+            </div>
+            <br>
+        </table>
+    </form>
+    </div>
