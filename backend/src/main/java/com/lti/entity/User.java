@@ -9,12 +9,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import com.lti.service.UserService;
 
+import com.lti.service.UserService;
 @Entity
 @Table(name = "TBL_USER")
 @NamedQuery(name = "is-user-present", query = "select count(u.emailId) from User u where u.emailId = :em")

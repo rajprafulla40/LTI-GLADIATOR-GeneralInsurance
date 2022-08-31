@@ -1,4 +1,4 @@
-package com.lti.exception;
+package com.lti.exceptions;
 
 public class UserServiceException extends RuntimeException{
 	
