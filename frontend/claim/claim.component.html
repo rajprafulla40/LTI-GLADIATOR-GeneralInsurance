@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title> LTI Insurance </title>   
+</head>
+    <body>
+    <div class="login-box">
+        <!-- <div class="cont"> -->
+                <!-- <img src="../assets/avatar.png" class="avatar"> -->
+        <h2> Claim Insurance </h2>
+        <br>
+        <br>
+            <form  (ngSubmit) = "claimInsurance()">
+                
+            <!-- <label for="claimDate">Claim Date:</label> -->
+            <h4>Claim Date</h4>
+            <input required #claimDate="ngModel" class="input" type="Date" name="claimDate" placeholder="DD/MM/YYYY" [(ngModel)] = claim.date> <br>
+            <span *ngIf="claimDate.invalid && claimDate.touched" class="error">Date is Required</span>
+            <br><br>
+
+            <!--<label for="claimStatus">Claim Status: </label>
+            <input type="text" name="status" placeholder="" [(ngModel)] = claim.status>-->
+
+            <!--<label for="amount">Claim Amount: </label>
+            <input type="number" name="amount" placeholder="" [(ngModel)] = claim.amount>-->
+        
+            <!-- <label for="contact">Mobile number</label> -->
+            <h4>Mobile Number</h4>
+            <input required #contact="ngModel" minlength="10" maxlength="10" pattern="[789][0-9]{9}" class="input" type="text" name="contact" placeholder="" [(ngModel)] = claim.contactNo> <br>
+            <span *ngIf="contact.invalid && contact.touched "class="error"> Contact Number Is Incorrct </span>
+            <br><br>
+            <!-- <label for="cId">Customer ID</label> -->
+            <h4>Customer ID</h4>
+            <input required #cID="ngModel" type="number" class="input" name="cID" placeholder="" [(ngModel)] = claim.customerId> <br>
+            <span *ngIf="cID.invalid && cID.touched" class="error">customerID is Required</span>
+            <br><br>
+            <!-- <label for="pno">Policy ID:</label> -->
+            <h4>Policy ID</h4>
+            <input required #pno="ngModel" type="number"  class="input" name="pno" placeholder="" [(ngModel)] = claim.policyId> <br>
+            <span *ngIf="pno.invalid && pno.touched" class="error">Policy Number is Required</span>
+            <br><br>
+            <!-- <label for="reason">Reason to claim:</label> -->
+            <h4>Reason To Claim</h4>
+            <select required #reason="ngModel" name="reason" id="reason" [(ngModel)] = claim.reason class="input">
+                <option value="natural_disaster">Natural disaster</option>
+                <option value="manmade_disaster">Man made disaster</option>
+                 <option value="road_accident">Road accident</option>
+                <option value="theft">Theft</option>
+            </select><br>
+            <span *ngIf="reason.invalid && reason.touched" class="error">Select One Reason</span>
+            <br><br>           
+        <input type="submit" value="Claim Insurance"  />
+        <!-- <button  type="submit" value="Claim Insurance"></button> -->
+        <br><br>
+        </form>
+        <input   type="submit" name="submit" value="Homepage" routerLink = "/home" routerLinkActive="active">
+
+        <!-- <h2>Update Status for Admin</h2>
+        <form (ngSubmit)="updateStatus()">
+            
+            <label for="claimId">Claim ID:</label>
+            <input type="number" name="claimId" placeholder="" [ngModel] = approveClaim.claimId>
+            
+            <label for="customerID">Customer ID:</label>
+            <input type = "number" name = "customerID" [(ngModel)] = approveClaim.customerId />
+            <label for="updateStatus">Claim Status:</label> 
+            <select name = "updateStatus" [(ngModel)] = approveClaim.status>
+                <option value = "Approved">Approved</option>
+                <option value = "Not Approved">Not Approved</option>
+            </select>
+            <input type="submit" value="Update Status" />
+        </form>-->
+        </div> 
+    
+    </body>
+</html>
